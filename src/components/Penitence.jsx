@@ -1,4 +1,5 @@
 import React from "react";
+import { connect } from "react-redux";
 
 const Penitence = function ({ penitence, removePenitence }) {
     (
@@ -28,3 +29,19 @@ const Penitence = function ({ penitence, removePenitence }) {
         </section>
     )
 }
+const mapStateToProps = state => ({
+    penitence: state.penitence
+})
+
+const mapDispatchToProps = dispatch =>({
+    removePenitence(member){
+        dispatch({
+            type: "REMOVE_PENITENCE",
+            member
+        })
+    }
+})
+
+
+
+export default connect(mapStateToProps,mapDispatchToProps)(Penitence)
