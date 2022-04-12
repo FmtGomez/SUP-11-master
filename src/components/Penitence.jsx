@@ -2,12 +2,12 @@ import React from "react";
 import { connect } from "react-redux";
 
 const Penitence = function ({ penitence, removePenitence }) {
-    (
+   return (
         <section>
             <h2>Penitence</h2>
-            <div>
+           
 
-                {penitence.map(member => {
+                {penitence?.map(member => {
                     <article className="penitence" key={member.id}>
 
 
@@ -25,7 +25,7 @@ const Penitence = function ({ penitence, removePenitence }) {
 
                 })}
 
-            </div>
+         
         </section>
     )
 }
