@@ -6,9 +6,9 @@ const Sup = function({sup, removeSup}){
    return  (
         <section>
             <h2>Sup</h2>
-            <div>
+            <div className="space">
 
-                {sup?.map((member) =>{
+                {sup?.map((member) =>(
                     <article className="sup" key ={member.id}>
                         <div>
                             <img src={member.photo} alt={member.name}/>
@@ -19,7 +19,7 @@ const Sup = function({sup, removeSup}){
                     </article>
 
 
-                })}
+                ))}
 
 
                         <img src={sala}/>

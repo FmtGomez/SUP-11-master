@@ -5,11 +5,11 @@ const Members = function({members,addSup,addPenitence}){
    return (
         <section>
             <h2>Members</h2>
-            <div>
+            <div className="contenedor-members">
             
                 {members? members.map((member) =>(
-                    <article className="Members" key={member.id}>
-                        <div>
+                    <article className="member" key={member.id} >
+                        <div >
                             <img src={member.photo} alt={member.name} />
                             <button onClick={()=>addSup(member)}>Sup</button>
                             <button onClick={()=>addPenitence(member)}>Penitence</button>

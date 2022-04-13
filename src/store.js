@@ -71,31 +71,32 @@ const reducerTeam = (state = initialState, action) => {
         sup: state.sup.concat(action.member),
         members: state.members.filter(
           (member) => member.id !== action.member.id
-        ),
-      };
-    case "REMOVE_SUP":
-      return {
-        ...state,
-        sup: state.sup.filter((member) => member.id !== action.member.id),
-        members: state.members.concat(action.member),
-      };
-    case "ADD_PENITENCE":
-      return {
-        ...state,
-        penitence: state.penitence.concat(action.member),
-        members: state.members.filter(
-          (member) => member.id !== action.member.id
-        ),
-      };
-    case "REMOVE_PENITENCE":
-      return { 
-        ...state, 
-        penitence: state.penitence.filter((member) => member.id !== action.member.id),
-        members: state.members.concat(action.member),
-    };
-    default:
-      return { state };
-  }
-};
+          ),
+        };
+        case "REMOVE_SUP":
+          return {
+            ...state,
+            sup: state.sup.filter((member) => member.id !== action.member.id),
+            members: state.members.concat(action.member),
+          };
+          case "ADD_PENITENCE":
+            return {
+              ...state,
+              penitence: state.penitence.concat(action.member),
+              members: state.members.filter(
+                (member) => member.id !== action.member.id
+                ),
+              };
+              case "REMOVE_PENITENCE":
+                return { 
+                  ...state, 
+                  penitence: state.penitence.filter((member) => member.id !== action.member.id),
+                  members: state.members.concat(action.member),
+                };
+                default:
+                  return { ...state };
+                }
+              };
+              
 
 export default createStore(reducerTeam);

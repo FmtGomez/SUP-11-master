@@ -5,10 +5,11 @@ const Penitence = function ({ penitence, removePenitence }) {
    return (
         <section>
             <h2>Penitence</h2>
-           
 
-                {penitence?.map(member => {
-                    <article className="penitence" key={member.id}>
+           <div className="penitence">
+
+                {penitence?.map(member => (
+                    <article className="m-penit" key={member.id}>
 
 
                         <div>
@@ -23,7 +24,8 @@ const Penitence = function ({ penitence, removePenitence }) {
                     
                     </article>
 
-                })}
+                ))}
+           </div>
 
          
         </section>
@@ -32,6 +34,7 @@ const Penitence = function ({ penitence, removePenitence }) {
 const mapStateToProps = state => ({
     penitence: state.penitence
 })
+
 
 const mapDispatchToProps = dispatch =>({
     removePenitence(member){
@@ -44,4 +47,4 @@ const mapDispatchToProps = dispatch =>({
 
 
 
-export default connect(mapStateToProps,mapDispatchToProps)(Penitence)
+export default connect(mapStateToProps,mapDispatchToProps) (Penitence)

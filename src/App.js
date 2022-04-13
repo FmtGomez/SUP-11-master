@@ -5,6 +5,7 @@ import store from "./store"
 import Lobby from "./components/Lobby"
 import Members from "./components/Member"
 import { Provider } from 'react-redux';
+import "../src/style/style.scss"
 
 const App = () => (
   <Provider store={store}>
